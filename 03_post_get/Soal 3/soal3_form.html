@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Form Pendaftaran Mahasiswa Baru</title>
+    </head>
+    <body>
+   
+        <h1>Form Pendaftaran Mahasiswa Baru</h1>
+   
+        <form method="post" action="soal3_proses.php">
+            <table>
+                <tr><td>Nama Lengkap</td><td></td><td><input type="text" name="nama" size="30"></td></tr>
+                <tr><td>Tempat Lahir</td><td></td><td><input type="text" name="tempat_lahir"></td></tr>
+                <tr><td>Tanggal Lahir</td><td></td><td>
+                    <select name="tanggal">
+                        <?php for($i=1; $i<=31; $i++) echo "<option value='$i'>$i</option>"; ?>
+                    </select>
+                    <select name="bulan">
+                        <?php for($i=1; $i<=12; $i++) echo "<option value='$i'>$i</option>"; ?>
+                    </select>
+                    <select name="tahun">
+                        <?php for($i=1980; $i<=2005; $i++) echo "<option value='$i'>$i</option>"; ?>
+                    </select>
+                </td></tr>
+                <tr><td>Alamat Rumah</td><td></td><td><textarea name="alamat" rows="3" cols="30"></textarea></td></tr>
+                <tr><td>Jenis Kelamin</td><td></td>
+                    <td><input type="radio" name="jenis_kelamin" value="Pria">Pria
+                        <input type="radio" name="jenis_kelamin" value="Wanita">Wanita</td>
+                    </tr>
+                    <tr><td>Asal Sekolah</td><td></td><td><input type="text" name="asal_sekolah" size="30"></td></tr>
+                    <tr><td>Nilai UAN</td><td></td><td><input type="text" name="nilai_uan"></td></tr>
+                </table>
+                <input type="submit" name="submit" value="Daftar">
+                <input type="reset" name="reset" value="Reset">
+            </form>
+        </body>
+</html>

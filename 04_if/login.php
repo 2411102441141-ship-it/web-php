@@ -1,0 +1,11 @@
+<?php
+$username = $_POST['username'];
+$password = $_POST['pass'];
+if ((($username == "joko") && ($password == "passjoko")) || 
+    (($username == "amin") && ($password == "passamin"))) {
+    echo "Login sukses";
+}
+else {
+    echo "Login gagal";
+}
+?>
